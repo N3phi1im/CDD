@@ -1,0 +1,28 @@
+<ion-view view-title="Entry">
+  <ion-content class="padding">
+    <form id="entryForm" name="entryForm" ng-submit="addEntity(entity); entity = null" novalidate>
+      <div class="card">
+        <label class="item item-input item-floating-label">
+          <span class="input-label balanced">Name</span>
+          <input placeholder="Name" type="text" ng-model="entity.name" required>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label balanced">Initiative</span>
+          <input placeholder="Initiative" type="number" ng-model="entity.init" required>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label balanced">Armor Class</span>
+          <input placeholder="AC" type="number" ng-model="entity.ac">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label balanced">Hit Points</span>
+          <input placeholder="HP" type="number" ng-model="entity.hp">
+        </label>
+      </div>
+      <button class="button button-full button-dark" type="submit" ng-disabled="entryForm.$invalid">Add</button>
+    </form>
+    <div class="list button button-full left" ng-repeat="e in things">
+      {{e.name}}<i class="icon ion-checkmark balanced right"></i>
+    </div>
+  </ion-content>
+</ion-view>

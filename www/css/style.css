@@ -1,0 +1,16 @@
+/* Empty. Add your own CSS if you like */
+.right {
+  float:right;
+}
+
+.inputbox {
+  width: 20%;
+}
+
+.hcenter {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}

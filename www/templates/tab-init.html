@@ -1,0 +1,13 @@
+<ion-view view-title="Initiative">
+  <ion-content class="padding">
+    <div class="card"  ng-repeat="e in things | orderBy: '-init'">
+      <div class="item item-text-wrap">
+        <button class="button button-small button-clear button-assertive right" ng-click="del(e)">X</button>
+        <h3>{{e.name}}</h3>
+        <p class="right">Initiative: {{e.init}}</p>
+        <p>AC: {{e.ac}}</p>
+        <p>HP: {{e.hp}}</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
